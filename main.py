@@ -88,10 +88,10 @@ class Plugin:
             decky_plugin.logger.exception("could not get recent data")
 
     async def recorder(self):
-        volt_file = open("/sys/class/power_supply/BAT1/voltage_now")
-        curr_file = open("/sys/class/power_supply/BAT1/current_now")
-        cap_file = open("/sys/class/power_supply/BAT1/capacity")
-        status = open("/sys/class/power_supply/BAT1/status")
+        volt_file = open("/sys/class/power_supply/BATT/voltage_now")
+        curr_file = open("/sys/class/power_supply/BATT/current_now")
+        cap_file = open("/sys/class/power_supply/BATT/capacity")
+        status = open("/sys/class/power_supply/BATT/status")
         logger = decky_plugin.logger
 
         logger.info("recorder started")
